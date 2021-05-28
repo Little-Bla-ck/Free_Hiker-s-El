@@ -1,0 +1,37 @@
+<!--pages/chatgroup/info.wxml-->
+<view class="line" ></view>
+<view class="members-list">
+ <block wx:for="{{members}}">
+  <view class="members-item" wx:if="{{item.type==1}}">
+    <image class="members-item-image" src="{{membersMap[item._openid].avatarUrl}}" mode="aspectFill"></image>
+    <view class="members-item-nickname">{{membersMap[item._openid].nickName}}</view>
+    
+  </view>
+  <view class="members-item" wx:if="{{item.type==2}}">
+    
+  </view>
+  <view class="members-item" wx:if="{{item.type==3}}" bindtap="clickMemberAdd">
+    <image class="members-item-image" src="https://dss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3314889580,1635831813&fm=26&gp=0.jpg" mode="aspectFill"></image>
+    <view class="members-item-nickname">
+      <text decode="true">&nbsp;</text>
+    </view>
+  </view>
+  <view class="members-item" wx:if="{{item.type==4}}" bindtap="clickMemberDelete">
+    <image class="members-item-image" src="https://img2.baidu.com/it/u=1129321393,4057073660&fm=26&fmt=auto&gp=0.jpg" mode="aspectFill"></image>
+    <view class="members-item-nickname">
+      <text decode="true">&nbsp;</text>
+    </view>
+  </view>
+ </block>
+  
+</view>
+
+<view class="line" style="height:20rpx;"></view>
+<view class="weui-cell weui-cell_access" bindtap="clickGroupName">
+	<view class="weui-cell__bd">群聊名称</view>
+	<view class="weui-cell__ft weui-cell__ft_in-access">
+		{{groupInfo.name ? groupInfo.name : '未命名'}}
+	</view>
+</view>
+<view class="line" style="height:20rpx;"></view>
+<button style="width:60%;" type="warn" size="default" bindtap="clickQuit">删除并退出</button>

@@ -1,0 +1,10 @@
+<!--miniprogram/pages/map/map.wxml-->
+<map scale="8" style="height: 630px;width: 100%"  markers="{{markers}}" latitude="{{markers[0].latitude}}" longitude="{{markers[0].longitude}}"
+bindtap="moveCenter" subkey="2FCBZ-M4WLO-H3QW6-SAYBP-WTLEZ-OYFWY" layer-style="2"
+></map>
+<button type="pramiry" size="mini" bindtap="getHightPlace">点我空气污染指数</button>
+
+
+
+
+

@@ -1,0 +1,81 @@
+<!-- pages/circle/list.wxml
+<text>pages/circle/list.wxml</text> -->
+
+<mp-navigation-bar  back="{{false}}" title="碳中和广场">
+  <image slot="left" src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2394432702,534850928&fm=26&gp=0.jpg" class="go-publish"
+  bindtap="back"></image>
+  <image slot="left" src="../../images/takePhoto.jpg" class="go-publish"
+  bindtap="goPublish"></image>
+  <image slot="left" src="https://img1.baidu.com/it/u=2998353330,2431983980&fm=26&fmt=auto&gp=0.jpg" class="refresh" animation="{{animation}}"
+  bindtap="refresh"></image>
+</mp-navigation-bar>
+<view class="item" wx:for="{{list}}" wx:index="index" bindtouchstart="bindTouchStart">
+  <view class="left">
+        <image class="avatar" src="{{item.userInfo.avatarUrl}}" ></image>
+  </view>
+  <view class="right">
+    <view class="nickname">
+      {{item.userInfo.nickName}}
+      <text wx:if="{{item.sendType==1}}" class="activity">（碳中和活动）</text>
+      <text wx:if="{{item.sendType==1}}" class="join" bindtap="join" data-index="{{index}}">加入</text>
+    </view>
+    <view class="content">{{item.content}} </view>
+    <view class="image-list">
+      <image class="image" wx:for-items="{{item.images}}" wx:for-item="image" src="{{image}}"></image>
+    </view>
+    <view class="time-area">
+      <view class="time">{{item.time}}</view>
+      <view>
+        <image class="operation-button" src="../../images/operation-button.jpg" catchtap="showOperationPannel" data-index="{{index}}"
+        bindtouchstart="bindTouchStartOperation" bindtouchend="bindTouchEndOperation"></image>
+        <view class="operation-pannel" wx:if="{{showOperationPannelIndex==index}}"
+        bindtouchstart="bindTouchStartOperationPannel" bindtouchend="bindTouchEndOperationPannel">
+          <view class="tab" catchtap="clickLove" data-index="{{index}}">
+            <image class="image"src="../../images/love-button.jpg"></image>
+            <text wx:if="{{item.isLove}}">取消</text>
+            <text wx:else>赞</text>
+          </view>
+          <view class="tab"catchtap="clickComment"data-index="{{index}}">
+            <image class="image"src="../../images/comment-button.jpg" ></image>
+            <text>评论</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="love-comment">
+        <view class="love"  wx:if="{{item.loveList.length>0}}">
+          <image class="love-icon" src="../../images/love-button.jpg"></image>
+          <text class="love-nickname" wx:for-items="{{item.loveList}}" wx:for-item="love">{{love.nickName}}</text>
+        </view>
+
+        <view class="comment" wx:if="{{item.commentList.length>0}}">
+          <view wx:for-items="{{item.commentList}}" wx:for-item="comment" wx:for-index="commentIndex" data-index="{{index}}" data-commentindex="{{commentIndex}}" catchtap="clickCommentItem">
+            <text class="comment-nickname">{{comment.nickName}}</text>
+            <block wx:if="{{comment.reply}}">
+              <text class="comment-content">回复</text>
+              <text class="comment-nickname">{{comment.reply}}</text>
+            </block>
+            <text class="comment-content">{{comment.content}}</text>
+          </view>
+        </view>
+
+    </view>
+  </view>
+</view>
+<!-- loading 样式-->
+<view wx:if="{{refresh && loading && list.length==0}}" class="weui-loadmore">
+        <view class="weui-loading"></view>
+        <view class="weui-loadmore__tips">加载更多</view>
+</view>
+<view wx:if="{{haveMoreData && loadMore}}" class="weui-loadmore">
+        <view class="weui-loading"></view>
+        <view class="weui-loadmore__tips">加载更多</view>
+</view>
+<view wx:if="{{!haveMoreData}}" class="weui-loadmore">
+        <view class="weui-loadmore__tips">没有更多数据啦</view>
+</view>
+<!-- loading 样式-->
+<view class="comment-add" style="bottom:{{heightBottom!=''?heightBottom:0}}rpx;" wx:if="{{showCommentAdd}}">
+    <input class="comment-imput" type="text" placeholder="{{reply.length>0 ? '回复'+reply : '评论' }}" focus="{{showCommentAdd}}"bindinput="bindInput" bindfocus="bindFocus"></input>
+  <button class="comment-send" type="primary" disabled="{{commentContent.length>0?false:true}}" size="mini"catchtap="clickSend">发送</button>
+</view>

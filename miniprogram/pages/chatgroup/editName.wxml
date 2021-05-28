@@ -1,0 +1,7 @@
+<!--pages/chatgroup/editName.wxml-->
+<view class="weui-cell">
+  <input class="weui-input" type="text" placeholder="请输入群名" value="{{value}}" bindinput="onInput"></input>
+</view>
+<view class="weui-cell">
+<a class="weui-btn weui-btn_primary" bindtap="onConfirm">确定</a>
+</view>

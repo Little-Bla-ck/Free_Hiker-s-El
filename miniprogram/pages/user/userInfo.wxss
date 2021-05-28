@@ -1,0 +1,20 @@
+/* pages/user/userInfo.wxss */
+.sendMsg{
+  margin-top:100rpx;
+  width:80%;
+}
+.avatar-parent{
+  width:60px;
+  height:60px;
+  border-radius: 50%;
+  overflow:hidden;
+}
+.avatar-image{
+  width:60px;
+  height:60px;
+}
+.nickname{
+  margin-left:10rpx;
+  font-size: 36rpx;
+  color:black;
+}

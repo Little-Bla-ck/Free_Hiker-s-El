@@ -1,0 +1,21 @@
+<view class="container" style="{{containerStyle}}">
+  <mp-navigation-bar back="{{false}}" show="true" title="{{chatTitle}}" background="#fff">
+		<view slot="left" bindtap="back" class="weui-navigation-bar__button weui-navigation-bar__btn_goback"></view>
+    <view>{{title}}</view>
+    <image slot="right" class="clickInfo"  src="https://img1.baidu.com/it/u=1363149554,3491312364&fm=26&fmt=auto&gp=0.jpg" bindtap="clickInfo"></image>
+	</mp-navigation-bar>
+  <chatroom
+    style="width: 100%; height: 100%"
+    envId="{{chatRoomEnvId}}"
+    collection="{{chatRoomCollection}}"
+    chatType="{{chatType}}"
+    userId="{{userId}}"
+    userAvatar="{{userAvatar}}"
+    userNickName="{{userNickName}}"
+    groupId="{{chatRoomGroupId}}"
+    groupName="{{chatRoomGroupName}}"
+    userInfo="{{userInfo}}"
+    onGetUserInfo="{{onGetUserInfo}}"
+    getOpenID="{{getOpenID}}"
+  ></chatroom>
+</view>

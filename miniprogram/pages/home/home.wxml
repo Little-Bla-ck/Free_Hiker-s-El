@@ -1,0 +1,100 @@
+<!--pages/home/home.wxml-->
+<mp-navigation-bar  back="{{false}}" show="true" title="{{title}}" background="#fff">
+  <image slot="left" src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3885886154,141614090&fm=26&gp=0.jpg" class="add-friend" bindtap="addFriend"></image>
+</mp-navigation-bar>
+<view class="page">
+    <view class="page__hd">
+      <!-- 对话页面内容 -->
+        <view class="page__title" wx:if="{{currentIndex==2}}">
+        <view class="msg-item" wx:for="{{msgList}}" bindtap="clickMsg" data-index="{{index}}">
+          <image class="msg-image" src="{{item.icon}}"></image>
+        <view class="msg-content">
+          <view class="msg-content-head">
+            <view class="msg-title">{{item.title}}</view>
+            <view class="msg-time">{{item.time}}</view>
+          </view>
+          <view class="msg-text">{{item.content}}</view>
+        </view>
+        </view>
+        </view>
+        <!-- 通讯录页面内容 -->
+        <view class="page__title" wx:if="{{currentIndex==1}}">
+            <mp-indexList vibrated = "{{false}}" list="{{listFriend}}" bindchoose="onChoose">
+    
+            </mp-indexList>
+        </view>
+        <!-- 首页 -->
+        <view wx:if="{{currentIndex==0}}">
+          <swiper indicator-dots="true" indicator-color="gray" indicator-active-color="black" autoplay="true" circular="true" class="swiper-parent">
+            <swiper-item class="swiperItem" >
+              <image class="swiperItem" src="https://z3.ax1x.com/2021/05/26/2CuBTA.png" mode="widthFix"></image>
+            </swiper-item>
+            <swiper-item >
+              <image class="swiperItem" src="https://z3.ax1x.com/2021/05/26/2CufmQ.png"></image>
+            </swiper-item>
+            <swiper-item>
+              <image class="swiperItem" src="https://z3.ax1x.com/2021/05/26/2CuIkn.png"></image>
+            </swiper-item>
+            <swiper-item>
+              <image class="swiperItem" src="https://z3.ax1x.com/2021/05/26/2CuHpV.png"></image>
+            </swiper-item>
+          </swiper>
+				<view class="weui-cells">
+					<view class="weui-cell" bindtap="clickCircle" >
+						<view >碳中和广场</view>
+					</view>
+				</view>
+        <view class="weui-cells">
+					<view class="weui-cell" bindtap="dailyCheck">
+						<view >每日低碳打卡</view>
+					</view>
+				</view>
+        <view class="weui-cells">
+					<view class="weui-cell" bindtap="clickMap">
+						<view >碳指数地图</view>
+					</view>
+				</view>
+				
+      </view>
+      <!-- 我的页面内容 -->
+        <view class="page__title" wx:if="{{currentIndex==3}}" class="mine">
+            <view class="weui-cells">
+                <view class="weui-cell">
+                    <view class="avatar-parent">
+                        <image class="avatar-image" src="{{userInfo.avatarUrl}}" mode="scaleToFill"></image>
+                    </view>
+                    <view class="nickname">{{userInfo.nickName}}</view>
+                </view>
+            </view>
+
+            <view class="weui-cells">
+					<view class="weui-cell" >
+						<view >碳中和积分</view>
+            <view class="grade">
+              <text decode="{{true}}" class="ingrade">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{grade}}</text>
+            </view>
+					</view>
+				</view>
+        <view class="weui-cells">
+					<view class="weui-cell" bindtap="clickRank">
+						<view >积分排行榜</view>
+            
+					</view>
+        </view>
+        <view class="weui-cells">
+					<view class="weui-cell" bindtap="aboutUs">
+						<view >关于我们</view>
+            
+					</view>
+				</view>
+
+        </view>
+    </view>
+    <mp-tabbar  style="position:fixed;bottom:0;width:100%;left:0;right:0;" list="{{list}}" bindchange="tabChange"></mp-tabbar >
+</view>
+<view class="operation-pannel" wx:if="{{showOperationPannel}}">
+  <view class="operation-pannel-item" wx:for="{{operationList}}" data-index="{{index}}" bindtap="clickOperationItem">
+    <image class="operation-pannel-image" src="{{item.imageUrl}}"></image>
+    <text class="operation-pannel-text" >{{item.text}}</text>
+  </view>
+</view>

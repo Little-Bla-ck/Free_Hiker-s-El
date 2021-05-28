@@ -1,0 +1,10 @@
+<!--pages/user/userInfo.wxml-->
+  <view class="weui-cells">
+      <view class="weui-cell">
+          <view class="avatar-parent">
+              <image class="avatar-image" src="{{avatarUrl}}" mode="scaleToFill"></image>
+          </view>
+          <view class="nickname">{{nickName}}</view>
+      </view>
+  </view>
+  <button class="sendMsg" type="primary" size="default" bindtap="sendMsg">发送消息</button>

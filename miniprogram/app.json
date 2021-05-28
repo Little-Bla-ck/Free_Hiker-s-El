@@ -1,0 +1,51 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/circle/list",
+    "pages/circle/publish",
+    "pages/home/home",
+    "pages/chatgroup/create",
+    "pages/chatgroup/info",
+    "pages/chatgroup/editName",
+    "pages/aboutUs/aboutUs",
+    "pages/index/index",
+    "pages/search/search",
+    "pages/dailyCheck/dailyCheck01",
+    "pages/user/userInfo",
+    "pages/userConsole/userConsole",
+    "pages/storageConsole/storageConsole",
+    "pages/databaseGuide/databaseGuide",
+    "pages/addFunction/addFunction",
+    "pages/deployFunctions/deployFunctions",
+    "pages/chooseLib/chooseLib",
+    "pages/openapi/openapi",
+    "pages/openapi/serverapi/serverapi",
+    "pages/openapi/callback/callback",
+    "pages/openapi/cloudid/cloudid",
+    "pages/im/im",
+    "pages/im/room/room",
+    "pages/addFunction/map",
+    "pages/rankList/rankList",
+    "pages/map/map"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "云开发 QuickStart",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2",
+  "plugins": {
+		"chooseLocation": {
+			"version": "1.0.10",
+			"provider": "wx6aaf93c4435fa1c1"
+		}
+  },
+  "permission": {
+		"scope.userLocation": {
+			"desc": "你的位置信息将用于小程序定位"
+		}
+	}
+}

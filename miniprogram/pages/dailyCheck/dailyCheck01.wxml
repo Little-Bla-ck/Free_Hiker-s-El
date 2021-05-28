@@ -1,0 +1,72 @@
+<!--pages/dailyCheck/dailyCheck01.wxml-->
+<image wx:if="{{haveAnswered==0}}" src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic.51yuansu.com%2Fbackgd%2Fcover%2F00%2F32%2F83%2F5bce8ceb7e413.jpg%21%2Ffw%2F780%2Fquality%2F90%2Funsharp%2Ftrue%2Fcompress%2Ftrue&refer=http%3A%2F%2Fpic.51yuansu.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1624718497&t=77a89ecea77fd6d879c14ccc416587ea" class='in-image' mode='widthFix'> </image>
+<image wx:if="{{haveAnswered==1}}" src="https://imgcdn.yicai.com/uppics/images/2019/10/e3c4fcfa4fdabf8e32bb7dc37191e28e.jpg" class='in-image' mode='widthFix'> </image>
+<image wx:if="{{haveAnswered==2}}" src="https://th.bing.com/th/id/R759c877733fa974d7d02e149ed210fc3?rik=Z%2bCiA5xmJqrd9A&riu=http%3a%2f%2fpic.51yuansu.com%2fpic3%2fcover%2f03%2f22%2f98%2f5b6d92c7ea817_610.jpg&ehk=R1VZQPjZWbZ4OguUUPj7GVbGEeGWX9tThr9SVESZD0Q%3d&risl=&pid=ImgRaw" class='in-image' mode='widthFix'> </image>
+<image wx:if="{{haveAnswered==3}}" src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimages.669pic.com%2Felement_pic%2F22%2F56%2F20%2F40%2Ff60a5beb9d63fd26925e77fe332e700b.jpg%21w700wb&refer=http%3A%2F%2Fimages.669pic.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1624718392&t=456b1401f523aef75fac5194c81a4665" class='in-image' mode='widthFix'> </image>
+<image wx:if="{{haveAnswered==4}}" src="https://tse2-mm.cn.bing.net/th/id/OIP.i-z3OJFMQs4dqjDUwkktMQHaE8?pid=ImgDet&rs=1" class='in-image' mode='widthFix'> </image>
+<view wx:if="{{haveAnswered==0}}">
+    <view class="question" >你今天走了多少步</view>
+    <button class="answer1" type="primary"  size="default" bindtap="clickAnswer" data-index="{{0}}" >
+        <image class="btnImg1" src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fbpic.588ku.com%2Felement_origin_min_pic%2F19%2F10%2F11%2F75daa139d07951bbf5d7f56f816481d2.jpg&refer=http%3A%2F%2Fbpic.588ku.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1624617068&t=3e01fa20fcacb3b7dd15f0cbda354763"></image>
+        <view>今天已经15000步了！还有谁？</view>
+        </button>
+    <button class="answer2" type="primary" size="default" bindtap="clickAnswer" data-index="{{1}}">
+        <image class="btnImg2" src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.51miz.com%2FElement%2F00%2F37%2F97%2F32%2F5d0bd66c_E379732_0e293cc8.png%21%2Fquality%2F90%2Funsharp%2Ftrue%2Fcompress%2Ftrue%2Fformat%2Fpng%2Ffh%2F630&refer=http%3A%2F%2Fimg.51miz.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1624617954&t=b43191c99488e9c5c9d4bb95044bae0c"></image>
+        <view>已经走了10000步啦</view>
+        </button>
+        <button class="answer3" type="primary"  size="default" bindtap="clickAnswer" data-index="{{2}}" >
+        <image class="btnImg3" src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fku.90sjimg.com%2Felement_origin_min_pic%2F00%2F95%2F24%2F4256f2dc1816c6d.jpg&refer=http%3A%2F%2Fku.90sjimg.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1624618199&t=2e6afd7e90094b69ce206665ca6c4cc9"></image>
+        <view>8000步左右吧，刚刚活动开</view>
+        </button>
+        <button class="answer4" type="primary"  size="default" bindtap="clickAnswer" data-index="{{3}}" >
+        <image class="btnImg4" src="https://img2.baidu.com/it/u=3490337046,1271388882&fm=26&fmt=auto&gp=0.jpg"></image>
+        <view>还不到五千步呢</view>
+        </button>
+</view>
+<view wx:elif="{{haveAnswered==1}}">
+    <view class="question">你今天到主要的出行方式是？</view>
+    <button class="answer1" type="primary"  size="default" bindtap="clickAnswer" data-index="{{0}}" >
+        <image class="btnImg1" src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic.51yuansu.com%2Fpic3%2Fcover%2F02%2F78%2F58%2F5a42220064b59_610.jpg&refer=http%3A%2F%2Fpic.51yuansu.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1624619806&t=a23dbfaba2cd2d774d20950d3494203f"></image>
+        <view>肯定是步行</view>
+        </button>
+        <button class="answer2" type="primary" size="default" bindtap="clickAnswer" data-index="{{1}}">
+        <image class="btnImg2" src="https://img2.baidu.com/it/u=1336490002,2249768764&fm=26&fmt=auto&gp=0.jpg"></image>
+        <view>自行车吧</view>
+        </button>
+        <button class="answer3" type="primary"  size="default" bindtap="clickAnswer" data-index="{{2}}" >
+        <image class="btnImg3" src="https://img0.baidu.com/it/u=2436786552,1272230712&fm=26&fmt=auto&gp=0.jpg"></image>
+        <view>我觉得是公交</view>
+        </button>
+        <button class="answer4" type="primary"  size="default" bindtap="clickAnswer" data-index="{{3}}" >
+        <image class="btnImg4" src="https://img1.baidu.com/it/u=3901885115,1154916747&fm=26&fmt=auto&gp=0.jpg"></image>
+        <view>私家车啊</view>
+        </button>
+</view>
+<view wx:elif="{{haveAnswered==2}}">
+    <view class="question">你今天让更多的人了解到碳中和了吗</view>
+    <button class="answer1" type="primary"  size="default" bindtap="clickAnswer" data-index="{{0}}" >
+        <image class="btnImg1" src="https://img2.baidu.com/it/u=2469096356,4090671880&fm=26&fmt=auto&gp=0.jpg"></image>
+        <view>肯定的，发扬碳中和义不容辞</view>
+        </button>
+        <button class="answer2" type="primary" size="default" bindtap="clickAnswer" data-index="{{1}}">
+        <image class="btnImg2" src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.51miz.com%2FElement%2F00%2F37%2F97%2F32%2F5d0bd66c_E379732_0e293cc8.png%21%2Fquality%2F90%2Funsharp%2Ftrue%2Fcompress%2Ftrue%2Fformat%2Fpng%2Ffh%2F630&refer=http%3A%2F%2Fimg.51miz.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1624617954&t=b43191c99488e9c5c9d4bb95044bae0c"></image>
+        <view>身边的人都知道碳中和啦</view>
+        </button>
+    
+</view>
+<view wx:elif="{{haveAnswered==3}}">
+    <view class="question">你今天有想到新的碳中和的点子吗</view>
+    <button class="answer1" type="primary"  size="default" bindtap="clickAnswer" data-index="{{0}}" >
+        <image class="btnImg1" src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=562163204,257218655&fm=26&gp=0.jpg"></image>
+        <view>有的</view>
+        </button>
+        <button class="answer2" type="primary" size="default" bindtap="clickAnswer" data-index="{{1}}">
+        <image class="btnImg2" src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3895225068,1041998716&fm=26&gp=0.jpg"></image>
+        <view>真遗憾，暂时还没有呢</view>
+        </button>
+    
+</view>
+<view class="imagesize" wx:elif="{{haveAnswered==4}}">
+    <view class="child">恭喜你，你已完成碳中和打卡，下面，请你开始新一天的碳中和之旅吧</view>
+    <button class="answer" type="primary" size="default" bindtap="clickAnswer" data-index="{{0}}">好耶！</button>
+</view>

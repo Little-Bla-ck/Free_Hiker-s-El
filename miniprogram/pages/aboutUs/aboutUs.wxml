@@ -1,0 +1,8 @@
+<!--pages/aboutUs/aboutUs.wxml-->
+<view class="aboutUs-parent">
+  <view class="aboutUs">本小程序由Free_Hiker制作，从2021年3月24日开始构思，经历了学习、分工、制作、内测等环节，并成功在5月15日开始公测，历经66天。基本完成了项目。</view>
+</view>
+<image src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg1.doubanio.com%2Fview%2Fgroup_topic%2Fl%2Fpublic%2Fp449176037.jpg&refer=http%3A%2F%2Fimg1.doubanio.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1624720232&t=603ba7e7e778157124a4967877425b31" class='in-image' mode='widthFix'> 
+  
+</image>
+

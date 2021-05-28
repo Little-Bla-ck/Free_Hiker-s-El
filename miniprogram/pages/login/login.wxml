@@ -1,0 +1,27 @@
+<!-- pages/login/login.wxml -->
+<!-- <text>pages/login/login.wxml</text> -->
+<view wx:if="{{userInfo!=null}}">
+    {{userInfo.nickName}}
+</view>
+<view class='imagesize' wx:else>
+  <image src="https://img0.baidu.com/it/u=3250753271,1662513503&fm=26&fmt=auto&gp=0.jpg" class='in-image' mode='widthFix'> </image>
+  <view class="child">
+  <button class="login" bindtap="bindGetUserInfo" size="default" type="primary" >开启碳中和之旅</button>
+</view>
+
+</view>
+
+
+<!-- 试一下小程序官方的登陆界面 -->
+<!-- <view class="container">
+  <view class="userinfo">
+    <block wx:if="{{!hasUserInfo}}">
+      <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 获取头像昵称 </button>
+      <button wx:else open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    </block>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+</view> -->

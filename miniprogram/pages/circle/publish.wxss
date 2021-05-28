@@ -1,0 +1,21 @@
+/* pages/circle/publish.wxss */
+.header{
+  width:100%;
+  height:60rpx;
+  display:flex;
+  position:relative;
+}
+.header .button{
+  height:50rpx;
+  font-size:26rpx;
+  position:absolute;
+  right:20rpx;
+  top:5rpx;
+}
+.publishActivity{
+  position: absolute;
+  right: 130rpx;
+  height:50rpx;
+  font-size:26rpx;
+  top:5rpx;
+}

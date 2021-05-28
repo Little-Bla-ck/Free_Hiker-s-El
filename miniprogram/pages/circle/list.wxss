@@ -1,0 +1,167 @@
+/* pages/circle/list.wxss */
+page{
+  background:#fff;
+}
+/* 
+  整个页面的宽度是750rpx
+  左右边距20rpx
+  头像设置80rpx
+  头像距离右侧10rpx
+  右侧剩余750-20-20-80-10=620
+*/
+.go-publish{
+  width:30px;
+  height:30px;
+  margin-left: 7rpx;
+}
+.refresh{
+  width:30px;
+  height:30px;
+  margin-left: 7rpx;
+}
+.item {
+  width:100%;
+  padding:20rpx 20rpx;/*上下边距+左右边距*/
+  display: flex;
+  border-bottom:1px solid #f0f0f0;
+}
+.left{
+  width:80rpx;
+  margin-right:10rpx;
+}
+.avatar{
+  width:80rpx;
+  height:80rpx;
+  background:#f3f3f3;/*当头像还没加载出来的时候，先显示这个，表示这个地方是头像*/
+}
+.right{
+  width:620rpx;
+  display:flex;
+  flex-direction:column;
+}
+.nickname{
+  font-size:32rpx;
+  line-height: 50rpx;
+  color:#3b4977;
+}
+.content{
+  font-size:32rpx;
+  line-height: 40rpx;
+  color:#181818;
+  margin-bottom:10rpx;
+}
+.image-list{
+  display:flex;
+  flex-wrap:wrap;
+}
+.image-list .image{
+  width:160rpx;
+  height:160rpx;
+  background:#f3f3f3;
+  margin-right:10rpx;
+  margin-bottom:10rpx;
+}
+.time-area{
+  display:flex;
+  height:70rpx;
+  position:relative;/*给time-area里面的元素设置一个相对的定位*/
+  align-items: center;
+}
+.time-area .time{
+  font-size:26rpx;
+  line-height: 70rpx;
+  color: #696969;
+}
+.time-area .operation-button{
+  height: 40rpx;
+  width:70rpx;
+  position:absolute;
+  right:0rpx;
+  top:15rpx;
+}
+.time-area .operation-pannel{
+  position: absolute;
+  width: 300rpx;
+  right: 80rpx;
+  top:0rpx;
+  line-height:70rpx;
+  background: #4c5154;
+  border-radius: 10rpx;
+  font-size :24rpx;
+  color:white;
+  text-align:center;
+}
+.time-area .operation-pannel .tab{
+  display:inline-block;/*不换行*/
+  width:150rpx;
+}
+.time-area .operation-pannel .tab .image{
+  height:26rpx;
+  width:26rpx;
+  vertical-align: middle;
+  background-color: transparent;
+}
+.love-comment{
+  margin-top:10rpx;
+  background-color: #f7f7f7;
+  width:100%;
+}
+.love{
+  padding:6rpx 16rpx;
+  border-bottom:1rpx solid #f0f0f0;
+}
+.love .love-icon {
+  width:26rpx;
+  height:26rpx;
+}
+.love .love-nickname{
+  font-size: 30rpx;
+  line-height: 40rpx;
+  color:#3b4977;
+}
+.comment {
+  padding:6rpx 16rpx;
+  padding-bottom:12rpx;
+}
+.comment .comment-content{
+  font-size:30rpx;
+  color:#181818;
+  line-height:40rpx;
+}
+.comment .comment-nickname{
+  color:#3b4977;
+}
+
+.comment-add{
+  position: fixed;/*可以悬浮*/
+  bottom:0rpx;
+  width:100%;
+  height:100rpx;
+  display:flex;
+  align-items:center;
+  background-color:#f1f1f1;
+  border-top:1rpx solid #f3f3f3
+}
+.comment-add comment-imput{
+  height:52rpx;
+  line-height:52rpx;
+  vertical-align:middle;
+  color:#181818;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  padding: 5rpx 20rpx;
+  background-color:#f3f3f3;
+  flex-grow: 1;
+}
+.comment-add comment-send{
+  margin-right:20rpx;
+  font-size:22rpx;
+}
+.activity{
+  color:gray;
+  font-size: 25rpx;
+}
+.join{
+  font-size:36rpx;
+  color: green;
+}

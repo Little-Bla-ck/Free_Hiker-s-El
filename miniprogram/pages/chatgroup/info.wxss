@@ -1,0 +1,39 @@
+/* pages/chatgroup/info.wxss */
+page{
+  background-color: #fff;
+}
+
+.members-list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 710rpx;
+  margin:0 20rpx;
+  margin-top: 10rpx;
+}
+
+.members-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 138rpx;
+  height: 138rpx;
+  margin-bottom: 10rpx;
+}
+
+.members-item .members-item-image {
+  width: 106rpx;
+  height: 106rpx;
+  background: #f3f3f3;
+}
+
+.members-item .members-item-nickname {
+  width: 130rpx;
+  font-size: 20rpx;
+  text-align: center;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: #333;
+}

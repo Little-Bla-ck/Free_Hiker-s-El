@@ -1,0 +1,13 @@
+/* pages/aboutUs/aboutUs.wxss */
+.aboutUs-parent{
+  margin-top: 0rpx;
+  text-align: center;
+}
+.aboutUs{
+  font-size: 36rpx;
+  color: black;
+}
+.in-image{
+  height:50%;
+  width: 100%;
+}

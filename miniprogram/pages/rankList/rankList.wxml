@@ -1,0 +1,20 @@
+<!--pages/rankList/rankList.wxml-->
+<!-- <view class="rankListTitle">
+  <view >碳中和积分排行榜</view>
+</view> -->
+<view class="yourRank">您当前的排名：{{yourRank}}</view>
+<view wx:for="{{rankList}}" data-index="{{index}}" wx:key="{{item._id}}"
+      id="item-{{index}}">
+  <view class="weui-cells">
+                <view class="weui-cell">
+                    <view class="avatar-parent">
+                        <image class="avatar-image" src="{{rankList[index].avatarUrl}}" mode="scaleToFill"></image>
+                    </view>
+                    <view class="nickname">{{rankList[index].nickName}}</view>
+                    <view class="grade">积分：{{rankList[index].grade}}</view>
+                    <view class="rankNumber" >
+                      <text decode="{{true}}">&nbsp;排名：{{index+1}}</text>
+                    </view>
+                </view>
+            </view>
+</view>
