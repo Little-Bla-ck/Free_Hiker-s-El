@@ -207,6 +207,12 @@ Page({
         "latitude" : "113.549130",
         "longitude" : "22.198750",
         "quality" : 19
+        },
+        {
+          "name" : "台湾台北",
+          "latitude" : "121.50",
+          "longitude" : "25.03",
+          "quality" : 19
         }
       ]    
     },
